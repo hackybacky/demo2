@@ -1,6 +1,7 @@
 // using express JS
 var express = require("express");
 var app = express();
+const path = require('path')
 require('dotenv').config();
 
 var db = process.env.MONGODB
@@ -43,6 +44,7 @@ app.use("/public/fonts", express.static(__dirname + "/public/fonts"));
 
 // using EJS as templating engine
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname,'/views'))
 const mainURL = process.env.HOST
 // main URL of website
 
