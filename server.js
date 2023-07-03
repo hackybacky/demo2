@@ -200,7 +200,7 @@ function recursiveSearchShared(files, query) {
 // start the http server
   console.log("Server started at " + mainURL);
 const PORT = process.env.PORT || 3000
-app.listen(PORT, ()=> console.log("hello"))
+app.listen(PORT, ()=> console.log(PORT))
   // connect with mongo DB server
   mongoClient.connect(
     db,
